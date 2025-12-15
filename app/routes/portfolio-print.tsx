@@ -149,9 +149,9 @@ export default function PrintPortfolio() {
 
         <Separator />
 
-        {/* 교육 */}
+        {/* 학력 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-3">🎓 교육</h2>
+          <h2 className="text-lg font-bold text-primary mb-3">🎓 학력</h2>
           <div className="space-y-3">
             {educations.map((edu, index) => (
               <div key={index} className="break-inside-avoid">

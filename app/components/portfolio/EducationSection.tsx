@@ -6,14 +6,14 @@ interface EducationSectionProps {
 }
 
 /**
- * 교육 섹션
+ * 학력 섹션
  */
 export function EducationSection({ educations }: EducationSectionProps) {
   return (
     <section>
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl">교육</CardTitle>
+          <CardTitle className="text-xl">학력</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">

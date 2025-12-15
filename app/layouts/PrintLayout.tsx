@@ -17,17 +17,22 @@ export function PrintLayout({ children }: PrintLayoutProps) {
 
   return (
     <div className="print-layout">
-      {/* 인쇄 시 숨겨지는 컨트롤 바 */}
-      <div className="print:hidden sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* 인쇄 시 숨겨지는 헤더 */}
+      <header className="print:hidden sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-14 items-center justify-between px-4">
-          <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
-            ← 웹 버전으로 돌아가기
+          <Link to="/" className="font-bold text-lg text-primary">
+            Portfolio
           </Link>
-          <Button onClick={handlePrint} size="sm">
-            🖨️ 인쇄하기
-          </Button>
+          <div className="flex items-center gap-10">
+            <Button onClick={handlePrint} size="sm">
+              🖨️ 인쇄하기
+            </Button>
+            <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
+              ← 웹 버전으로 돌아가기
+            </Link>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/* A4 페이지 컨테이너 */}
       <div className="print-container mx-auto bg-white">

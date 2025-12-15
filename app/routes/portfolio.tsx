@@ -45,7 +45,7 @@ export default function Portfolio() {
         {/* 프로젝트 */}
         <ProjectsSection projects={portfolioData.projects} />
 
-        {/* 교육 */}
+        {/* 학력 */}
         <EducationSection educations={portfolioData.educations} />
 
         {/* 자격증 */}

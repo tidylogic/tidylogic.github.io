@@ -52,7 +52,7 @@ export interface Project {
   link?: string; // 프로젝트 링크 (선택)
 }
 
-// 교육
+// 학력
 export interface Education {
   institution: string; // 학교/기관명
   major?: string; // 전공
