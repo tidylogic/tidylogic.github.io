@@ -1,33 +1,24 @@
-<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="modulepreload" href="/assets/manifest-8f1f3fe4.js"/><link rel="modulepreload" href="/assets/entry.client-B0TW32ry.js"/><link rel="modulepreload" href="/assets/chunk-WWGJGFF6-BOKkXrnx.js"/><link rel="modulepreload" href="/assets/index-7vuud5lu.js"/><link rel="modulepreload" href="/assets/root-Bh6SqG1n.js"/><link rel="stylesheet" href="/assets/root-CWJE7VYj.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"/><script type="text/javascript">
-              // Single Page Apps for GitHub Pages
-              // MIT License
-              // https://github.com/rafgraph/spa-github-pages
-              (function(l) {
-                if (l.search[1] === '/') {
-                  var decoded = l.search
-                    .slice(1)
-                    .split('&')
-                    .map(function(s) {
-                      return s.replace(/~and~/g, '&')
-                    })
-                    .join('?')
-                  window.history.replaceState(
-                    null,
-                    null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                  )
-                }
-              })(window.location)
-            </script></head><body><script>
-              console.log(
-                "💿 Hey developer 👋. You can provide a way better UX than this " +
-                "when your app is loading JS modules and/or running `clientLoader` " +
-                "functions. Check out https://reactrouter.com/start/framework/route-module#hydratefallback " +
-                "for more information."
-              );
-            </script><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"unstable_subResourceIntegrity":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"initial"},"ssr":false,"isSpaMode":true};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">import "/assets/manifest-8f1f3fe4.js";
-import * as route0 from "/assets/root-Bh6SqG1n.js";
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>김중엽 | 백엔드 개발자</title><meta name="description" content="백엔드 개발자 김중엽의 소개와 참여 프로젝트입니다."/><link rel="icon" href="/favicon.ico"/><link rel="modulepreload" href="/assets/manifest-a19c3437.js"/><link rel="modulepreload" href="/assets/entry.client-CrUvV5Sx.js"/><link rel="modulepreload" href="/assets/chunk-WWGJGFF6-BL36B4i1.js"/><link rel="modulepreload" href="/assets/index-C9PTEzZT.js"/><link rel="modulepreload" href="/assets/root-BCApOvgW.js"/><link rel="modulepreload" href="/assets/WebLayout-BV6dgbQd.js"/><link rel="modulepreload" href="/assets/portfolio-Buqy1pKB.js"/><link rel="modulepreload" href="/assets/home-D5BQ7CA4.js"/><link rel="stylesheet" href="/assets/root-D5AKNtvQ.css"/></head><body><div class="site-shell"><header class="site-header"><div class="site-container site-header-inner"><a class="site-name" href="/" data-discover="true">김중엽</a><nav class="site-nav" aria-label="주 메뉴"><a aria-current="page" class="active" href="/" data-discover="true">홈</a><a class="" href="/resume" data-discover="true">이력서</a><a class="" href="/career" data-discover="true">경력기술서</a></nav></div></header><main class="site-container"><div class="home-intro"><section aria-labelledby="home-name"><h1 class="home-name" id="home-name">김중엽</h1><p class="home-role">백엔드 개발자</p><p class="home-summary">Go로 서비스 백엔드를 개발합니다. 이미지 검색, 비동기 이미지 처리, 쇼핑몰 주문 연동 시스템을 다뤘습니다.</p><div class="home-contact"><a href="mailto:wndduq0000@gmail.com">이메일</a><a href="https://github.com/tidylogic">GitHub</a></div></section><section class="home-projects" aria-labelledby="home-projects-title"><h2 id="home-projects-title">참여 프로젝트</h2><ul><li><a href="/career#acloset" data-discover="true"><strong>에이클로젯</strong><span>글로벌 AI 디지털 옷장 서비스 백엔드 개발</span></a></li><li><a href="/career#looko-ai" data-discover="true"><strong>Looko-AI</strong><span>하루 2만 건 이상의 주문을 처리하는 실시간 시스템 개발</span></a></li><li><a href="/career#secondsold" data-discover="true"><strong>SecondSold</strong><span>빈티지 의류 거래 플랫폼의 백엔드 시스템 개발</span></a></li></ul></section></div><nav class="home-documents" aria-label="문서 바로가기"><a href="/resume" data-discover="true"><strong>이력서</strong><span>경력 요약, 기술 스택, 학력 및 자격증</span></a><a href="/career" data-discover="true"><strong>경력기술서</strong><span>프로젝트별 담당 업무와 사용 기술</span></a></nav></main></div><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"unstable_subResourceIntegrity":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"initial"},"ssr":false,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">import "/assets/manifest-a19c3437.js";
+import * as route0 from "/assets/root-BCApOvgW.js";
+import * as route1 from "/assets/WebLayout-BV6dgbQd.js";
+import * as route2 from "/assets/home-D5BQ7CA4.js";
   
-  window.__reactRouterRouteModules = {"root":route0};
+  window.__reactRouterRouteModules = {"root":route0,"layouts/WebLayout":route1,"routes/home":route2};
 
-import("/assets/entry.client-B0TW32ry.js");</script><!--$--><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{},\"actionData\",\"errors\"]\n");</script><!--$--><script>window.__reactRouterContext.streamController.close();</script><!--/$--><!--/$--></body></html>
+import("/assets/entry.client-CrUvV5Sx.js");</script><!--$?--><template id="B:0"></template><!--/$--><script id="_R_">requestAnimationFrame(function(){$RT=performance.now()});</script><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{},\"actionData\",\"errors\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>$RB=[];$RV=function(a){$RT=performance.now();for(var b=0;b<a.length;b+=2){var c=a[b],e=a[b+1];null!==e.parentNode&&e.parentNode.removeChild(e);var f=c.parentNode;if(f){var g=c.previousSibling,h=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d||"/&"===d)if(0===h)break;else h--;else"$"!==d&&"$?"!==d&&"$~"!==d&&"$!"!==d&&"&"!==d||h++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;e.firstChild;)f.insertBefore(e.firstChild,c);g.data="$";g._reactRetry&&requestAnimationFrame(g._reactRetry)}}a.length=0};
+$RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))?(a.previousSibling.data="$~",$RB.push(a,b),2===$RB.length&&("number"!==typeof $RT?requestAnimationFrame($RV.bind(null,$RB)):(a=performance.now(),setTimeout($RV.bind(null,$RB),2300>a&&2E3<a?2300-a:$RT+300-a)))):b.parentNode.removeChild(b)};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script></body></html>
