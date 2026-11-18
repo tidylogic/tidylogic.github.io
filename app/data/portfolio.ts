@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
     profile: {
         name: "김중엽",
         title: "백엔드 개발자",
-        photo: undefined, // 프로필 사진 URL을 넣으세요
+        photo: undefined, // 예: public/profile.jpg에 사진을 넣고 "/profile.jpg"로 지정
     },
 
     // 자기소개
