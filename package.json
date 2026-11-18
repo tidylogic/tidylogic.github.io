@@ -8,12 +8,13 @@
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/client"
+    "predeploy": "npm run build && node -e \"require('node:fs').copyFileSync('build/client/__spa-fallback.html', 'build/client/404.html')\"",
+    "deploy": "gh-pages -d build/client --nojekyll"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
     "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/noto-sans-kr": "5.3.1",
     "@react-router/node": "7.10.1",
     "@react-router/serve": "7.10.1",
     "class-variance-authority": "^0.7.1",

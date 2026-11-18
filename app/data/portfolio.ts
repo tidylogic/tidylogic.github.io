@@ -15,7 +15,7 @@ export const portfolioData: PortfolioData = {
     // 자기소개
     introduction: {
         summary: "안정적이고 확장 가능한 서버 시스템을 설계하는 백엔드 개발자입니다.",
-        description: `3년차 백엔드 개발자로서, 대규모 트래픽 처리와 모노레포 아키텍처 설계 경험이 있습니다.
+        description: `대규모 트래픽 처리와 모노레포 아키텍처 설계 경험이 있습니다.
     
 클린 코드와 테스트 주도 개발을 지향하며, 팀과의 협업을 통해 더 나은 서비스를 만들어가는 것을 좋아합니다.
 
@@ -53,31 +53,16 @@ export const portfolioData: PortfolioData = {
         {
             company: "(주)룩코",
             position: "백엔드 개발자",
-            period: "2022.10 - 재직 중(3년 3개월)",
+            period: "2022.10 - 재직 중",
             description: "글로벌 AI 디지털 옷장 서비스, B2B 의류 판매 서비스, 빈티지 거래 서비스 백엔드 개발",
-            achievements: [
-                "TODO",
-                // "MSA 아키텍처로 전환하여 시스템 안정성 30% 향상",
-                // "주문 처리 시스템 최적화로 응답 시간 50% 단축",
-                // "5명 규모의 백엔드 팀 리딩 및 코드 리뷰 프로세스 정립",
-                // "CI/CD 파이프라인 구축으로 배포 시간 70% 단축",
-            ],
+            achievements: [],
         },
     ],
 
     // 프로젝트
     projects: [
         {
-            name: "TODO",
-            period: "20xx.xx - 20xx.xx",
-            description: "TODO",
-            role: "백엔드 개발자",
-            techStack: ["TODO"],
-            achievements: [
-                "TODO",
-            ],
-        },
-        {
+            id: "acloset",
             name: "에이클로젯",
             period: "2022.11 - 진행 중",
             description: "글로벌 AI 디지털 옷장 서비스 백엔드 개발",
@@ -90,6 +75,7 @@ export const portfolioData: PortfolioData = {
             ],
         },
         {
+            id: "looko-ai",
             name: "Looko-AI",
             period: "2023.03 - 2023.11",
             description: "하루 2만 건 이상의 주문을 처리하는 실시간 시스템 개발",
@@ -102,6 +88,7 @@ export const portfolioData: PortfolioData = {
             ],
         },
         {
+            id: "secondsold",
             name: "SecondSold",
             period: "2023.03 - 2023.11",
             description: "빈티지 의류 거래 플랫폼의 백엔드 시스템 개발",

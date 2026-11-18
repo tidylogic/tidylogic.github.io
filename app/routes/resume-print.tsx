@@ -1,5 +1,5 @@
 /**
- * 인쇄용 포트폴리오 페이지
+ * 인쇄용 이력서 페이지
  * A4 세로 용지에 최적화된 레이아웃
  */
 
@@ -10,20 +10,20 @@ import { Separator } from "~/components/ui/separator";
 
 export function meta() {
   return [
-    { title: `${portfolioData.profile.name} | ${portfolioData.profile.title} (인쇄용)` },
-    { name: "description", content: `${portfolioData.profile.name}의 포트폴리오입니다.` },
+    { title: `인쇄용 이력서 | ${portfolioData.profile.name}` },
+    { name: "description", content: `${portfolioData.profile.name}의 인쇄용 이력서입니다.` },
   ];
 }
 
-export default function PrintPortfolio() {
+export default function PrintResume() {
   const { profile, introduction, contact, skills, experiences, projects, educations, certificates } =
     portfolioData;
 
   return (
     <PrintLayout>
-      <div className="print-page p-8 space-y-6 text-sm">
+      <div className="print-page space-y-6 px-5 py-7 text-sm sm:p-8">
         {/* 기본 정보 + 연락처 (헤더 영역) */}
-        <header className="flex items-start justify-between border-b-2 border-primary pb-4">
+        <header className="flex flex-wrap items-start justify-between gap-4 border-b border-border pb-4">
           <div className="flex items-center gap-4">
             {profile.photo ? (
               <img
@@ -31,29 +31,25 @@ export default function PrintPortfolio() {
                 alt={profile.name}
                 className="h-24 w-24 rounded-full object-cover border-2 border-primary"
               />
-            ) : (
-              <div className="h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center text-3xl font-bold text-primary">
-                {profile.name.charAt(0)}
-              </div>
-            )}
+            ) : null}
             <div>
               <h1 className="text-3xl font-bold text-foreground">{profile.name}</h1>
               <p className="text-xl text-primary font-medium mt-1">{profile.title}</p>
             </div>
           </div>
-          <div className="text-right text-xs space-y-1">
-            <p className="font-medium">📧 {contact.email}</p>
-            {contact.phone && <p>📞 {contact.phone}</p>}
-            {contact.github && <p>🐙 {contact.github.replace("https://", "")}</p>}
-            {contact.blog && <p>📝 {contact.blog.replace("https://", "")}</p>}
-            {contact.linkedin && <p>💼 {contact.linkedin.replace("https://", "")}</p>}
-            {contact.website && <p>🌐 {contact.website.replace("https://", "")}</p>}
+          <div className="space-y-1 text-xs sm:text-right">
+            <p className="font-medium">{contact.email}</p>
+            {contact.phone && <p>{contact.phone}</p>}
+            {contact.github && <p>{contact.github.replace("https://", "")}</p>}
+            {contact.blog && <p>{contact.blog.replace("https://", "")}</p>}
+            {contact.linkedin && <p>{contact.linkedin.replace("https://", "")}</p>}
+            {contact.website && <p>{contact.website.replace("https://", "")}</p>}
           </div>
         </header>
 
         {/* 자기소개 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-2">👋 자기소개</h2>
+          <h2 className="text-lg font-bold text-primary mb-2">자기소개</h2>
           <p className="font-semibold text-foreground mb-2">{introduction.summary}</p>
           <p className="text-muted-foreground whitespace-pre-line text-xs leading-relaxed">
             {introduction.description}
@@ -64,7 +60,7 @@ export default function PrintPortfolio() {
 
         {/* 기술 스택 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-3">🛠️ 기술 스택</h2>
+          <h2 className="text-lg font-bold text-primary mb-3">기술 스택</h2>
           <div className="space-y-3">
             {skills.map((skill, index) => (
               <div key={index}>
@@ -85,7 +81,7 @@ export default function PrintPortfolio() {
 
         {/* 경력 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-3">💼 경력</h2>
+          <h2 className="text-lg font-bold text-primary mb-3">경력</h2>
           <div className="space-y-4">
             {experiences.map((exp, index) => (
               <div key={index} className="break-inside-avoid">
@@ -99,11 +95,13 @@ export default function PrintPortfolio() {
                   </Badge>
                 </div>
                 <p className="text-xs text-muted-foreground mb-1">{exp.description}</p>
-                <ul className="list-disc list-inside space-y-0.5 text-xs text-muted-foreground ml-2">
-                  {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex}>{achievement}</li>
-                  ))}
-                </ul>
+                {exp.achievements.length > 0 && (
+                  <ul className="ml-2 list-inside list-disc space-y-0.5 text-xs text-muted-foreground">
+                    {exp.achievements.map((achievement) => (
+                      <li key={achievement}>{achievement}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
@@ -113,10 +111,10 @@ export default function PrintPortfolio() {
 
         {/* 프로젝트 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-3">🚀 프로젝트</h2>
+          <h2 className="text-lg font-bold text-primary mb-3">프로젝트</h2>
           <div className="space-y-4">
-            {projects.map((project, index) => (
-              <div key={index} className="break-inside-avoid">
+            {projects.map((project) => (
+              <div key={project.id} className="break-inside-avoid">
                 <div className="flex items-start justify-between mb-1">
                   <div>
                     <h3 className="font-bold text-foreground">{project.name}</h3>
@@ -134,13 +132,15 @@ export default function PrintPortfolio() {
                     </Badge>
                   ))}
                 </div>
-                <ul className="list-disc list-inside space-y-0.5 text-xs text-muted-foreground ml-2">
-                  {project.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex}>{achievement}</li>
-                  ))}
-                </ul>
+                {project.achievements.length > 0 && (
+                  <ul className="ml-2 list-inside list-disc space-y-0.5 text-xs text-muted-foreground">
+                    {project.achievements.map((achievement) => (
+                      <li key={achievement}>{achievement}</li>
+                    ))}
+                  </ul>
+                )}
                 {project.link && (
-                  <p className="text-xs text-primary mt-1">🔗 {project.link}</p>
+                  <p className="text-xs text-primary mt-1">{project.link}</p>
                 )}
               </div>
             ))}
@@ -151,7 +151,7 @@ export default function PrintPortfolio() {
 
         {/* 학력 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-3">🎓 학력</h2>
+          <h2 className="text-lg font-bold text-primary mb-3">학력</h2>
           <div className="space-y-3">
             {educations.map((edu, index) => (
               <div key={index} className="break-inside-avoid">
@@ -180,7 +180,7 @@ export default function PrintPortfolio() {
 
         {/* 자격증 */}
         <section className="print-section">
-          <h2 className="text-lg font-bold text-primary mb-3">📜 자격증</h2>
+          <h2 className="text-lg font-bold text-primary mb-3">자격증</h2>
           <div className="space-y-2">
             {certificates.map((cert, index) => (
               <div key={index} className="break-inside-avoid">

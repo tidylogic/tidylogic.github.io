@@ -43,6 +43,7 @@ export interface Experience {
 
 // 프로젝트
 export interface Project {
+  id: string; // 경력기술서 내 프로젝트 링크
   name: string;
   period: string;
   description: string;

@@ -1,6 +1,10 @@
-import { type RouteConfig, index, route } from "@react-router/dev/routes";
+import { type RouteConfig, index, layout, route } from "@react-router/dev/routes";
 
 export default [
-  index("routes/portfolio.tsx"),           // PC용 포트폴리오 (메인 페이지)
-  route("print", "routes/portfolio-print.tsx"),      // 인쇄용 포트폴리오
+  layout("layouts/WebLayout.tsx", [
+    index("routes/home.tsx"),
+    route("resume", "routes/resume.tsx"),
+    route("career", "routes/career.tsx"),
+  ]),
+  route("print", "routes/resume-print.tsx"),
 ] satisfies RouteConfig;
