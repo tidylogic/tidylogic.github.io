@@ -1,0 +1,1 @@
+import{p as i}from"./chunk-WWGJGFF6-BL36B4i1.js";function e({profile:t}){const o=t.photo?.trim();return i.jsxs("div",{className:o?"profile profile-with-photo":"profile",children:[o&&i.jsx("img",{className:"profile-photo",src:o,alt:"",width:80,height:80}),i.jsxs("div",{children:[i.jsx("h1",{children:t.name}),i.jsx("p",{children:t.title})]})]})}export{e as P};
